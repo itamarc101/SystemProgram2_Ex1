@@ -38,34 +38,6 @@ void DeleteAdptArray(PAdptArray pAA)
 }
 
 
-// Result SetAdptArrayAt(PAdptArray pArr, int idx, PElement pNewElem)
-// {
-//     int changed = 0;
-//     PElement *newpElemArr;
-//     if (pArr == NULL || idx < 0)
-//         return FAIL;
-//     if (idx >= pArr->arrSize)
-//     {
-//         if ((newpElemArr = (PElement *)calloc((idx + 1), sizeof(PElement))) ==NULL)
-//             return FAIL;
-// 		for (int i = 0; i < pArr->arrSize; i++)
-//         {
-//             newpElemArr[i] = (pArr->PElemArr)[i];
-//         }
-//         newpElemArr[idx] = pArr->copyF(pNewElem);
-//         free(pArr->PElemArr);
-// 		pArr->PElemArr = newpElemArr;
-//         changed = 1;
-//     }
-//     else{
-//         pArr->delF((pArr->PElemArr)[idx]);
-//         (pArr->PElemArr)[idx] = pArr->copyF(pNewElem);
-//     }
-//     if( changed == 1)
-//         pArr->arrSize = idx + 1;
-//     return SUCCESS;
-// }
-
 Result SetAdptArrayAt(PAdptArray pAA, int i, PElement pNew)
 {
     PElement* newElem;
